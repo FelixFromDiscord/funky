@@ -5,6 +5,7 @@
   --color: #000;
   --header-outline: #223;
   --button: #000;
+  --about-header: #13269e;
 }
 
 body {
@@ -26,6 +27,7 @@ body:has(#theme-switch:checked) {
   --header-text: #fff;
   --header-outline: #fff;
   --button: #fff;
+  --about-header: #ADB2D2;
 }
 
 label {
@@ -137,7 +139,7 @@ input[type=checkbox]:checked::before {
 }
 
 .about-head {
-  color: #ADB2D2;
+  color: var(--about-header);
 }
 
 .about-content {
