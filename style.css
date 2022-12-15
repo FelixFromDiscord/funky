@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css2?family=Unbounded&display=swap");
+:root {
+  --header-text: #223;
+  --background: #fff;
+  --color: #000;
+  --header-outline: #223;
+  --button: #000;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Unbounded", cursive;
+  background-color: var(--background);
+  color: var(--color);
+  transition: all 0.4s ease-in-out;
+}
+
+body::-webkit-scrollbar {
+  width: 0;
+}
+
+body:has(#theme-switch:checked) {
+  --background: rgba(2,2,12,1);
+  --color: #fff;
+  --header-text: #fff;
+  --header-outline: #fff;
+  --button: #fff;
+}
+
+label {
+  font-size: x-large;
+}
+
+.tswitch {
+  margin-top: 1em;
+  margin-left: 1em;
+}
+
+input[type=checkbox] {
+  appearance: none;
+  cursor: pointer;
+  background-color: #fff;
+  margin: 0;
+  font: inherit;
+  color: currentColor;
+  width: 1.15em;
+  height: 1.15em;
+  border: 0.15em solid currentColor;
+  border-radius: 0.15em;
+  transform: translateY(-0.075em);
+  display: grid;
+  place-content: center;
+}
+
+input[type=checkbox]::before {
+  content: "";
+  width: 0.65em;
+  height: 0.65em;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1em 1em rgb(26, 0, 143);
+  border-radius: 100%;
+}
+
+input[type=checkbox]:checked::before {
+  transform: scale(0.75);
+  border-radius: 100%;
+}
+
+.container-title {
+  transition: all 0.4s ease-in-out;
+  font-size: 8vw;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  user-select: none;
+}
+
+@media only screen and (max-width: 800px) {
+  .container-title {
+    font-size: 16vw;
+  }
+}
+.main-solid {
+  transition: all 0.4s ease-in-out;
+  color: var(--header-text);
+}
+
+.main-stroke {
+  transition: all 0.4s ease-in-out;
+  color: var(--background);
+  text-shadow: -2px -2px 0 var(--header-outline), 2px -2px 0 var(--header-outline), -2px 2px 0 var(--header-outline), 2px 2px 0 var(--header-outline);
+  margin-left: 15%;
+}
+
+.button {
+  transition: all 0.4s ease-in-out;
+  color: var(--button);
+  cursor: pointer;
+  animation: bounce 2s infinite;
+  position: absolute;
+  top: 95%;
+  left: 50%;
+  transform: translate(-50%, -95%);
+  padding: 12px;
+  padding-bottom: 10px;
+  border-radius: 50px;
+  border: var(--button) 2px solid;
+}
+
+@keyframes bounce {
+  0% {
+    top: 95%;
+    left: 50%;
+    transform: translate(-50%, -95%);
+  }
+  50% {
+    top: 92%;
+    left: 50%;
+    transform: translate(-50%, -92%);
+  }
+  100% {
+    top: 95%;
+    left: 50%;
+    transform: translate(-50%, -95%);
+  }
+}
+.container-about {
+  text-align: center;
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 800px;
+}
+
+.about-head {
+  color: #ADB2D2;
+}
+
+.about-content {
+  margin-top: 26px;
+  color: var(--main-text);
+}
+
+/*# sourceMappingURL=style.css.map */
