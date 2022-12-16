@@ -71,7 +71,6 @@ input[type=checkbox]:checked::before {
 }
 
 .container-title {
-  transition: all 0.4s ease-in-out;
   font-size: 8vw;
   position: absolute;
   top: 50%;
@@ -80,11 +79,17 @@ input[type=checkbox]:checked::before {
   display: flex;
   flex-direction: column;
   user-select: none;
+  transition: all 0.4s ease-in-out;
 }
 
 @media only screen and (max-width: 800px) {
   .container-title {
     font-size: 16vw;
+  }
+}
+@media only screen and (min-height: 800px) {
+  .button {
+    display: none;
   }
 }
 .main-solid {
@@ -140,6 +145,7 @@ input[type=checkbox]:checked::before {
 
 .about-head {
   color: var(--about-header);
+  transition: all 0.4s ease-in-out;
 }
 
 .about-content {
